@@ -1,0 +1,8 @@
+Django
+graphene
+graphene-django
+graphql-core
+django-filter
+psycopg2-binary
+pytest
+pytest-django
