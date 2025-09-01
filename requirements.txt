@@ -1,8 +1,6 @@
 Django
-graphene
 graphene-django
-graphql-core
-django-filter
 psycopg2-binary
+django-environ
 pytest
 pytest-django
