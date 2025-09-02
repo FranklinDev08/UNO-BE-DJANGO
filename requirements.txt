@@ -1,0 +1,6 @@
+Django
+graphene-django
+psycopg2-binary
+django-environ
+pytest
+pytest-django
