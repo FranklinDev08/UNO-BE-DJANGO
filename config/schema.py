@@ -1,24 +1,26 @@
 import graphene
+from infrastructure.graphql.mutation import Mutation as MutationRoot
 
-from infrastructure.graphql.queries.auditoria_query import AuditoriaQuery
-from infrastructure.graphql.mutations.auditoria_mutation import AuditoriaMutations
+''''
+from infrastructure.graphql.queries.role_query import RolesQuery
+from infrastructure.graphql.queries.faculty_query import FacultiesQuery
+from infrastructure.graphql.queries.user_query import UsersQuery
+from infrastructure.graphql.queries.career_query import CareersQuery
+from infrastructure.graphql.queries.student_query import StudentsQuery
+from infrastructure.graphql.queries.teacher_query import TeachersQuery
+from infrastructure.graphql.queries.materia_query import MateriasQuery
+'''
 
-# TODO: Definir el conjunto de queries disponibles en el esquema GraphQL
-# Se hereda de AuditoriaQuery y graphene.ObjectType
 class Query(
-    AuditoriaQuery,
-    graphene.ObjectType
-):
-    # TODO: Query de prueba para verificar que la API está en funcionamiento
-    hello = graphene.String(default_value="API GraphQL funcionando correctamente")
+    
+    #RolesQuery,
+    #UsersQuery,
+    #FacultiesQuery,
+    #CareersQuery,
+    #StudentsQuery,
+    #TeachersQuery,
+    #MateriasQuery,
+            graphene.ObjectType):
+    hello = graphene.String(default_value="Hola mundo")
 
-# TODO: Definir el conjunto de mutaciones disponibles en el esquema GraphQL
-# Se hereda de AuditoriaMutations y graphene.ObjectType
-class Mutation(
-    AuditoriaMutations,
-    graphene.ObjectType
-):
-    pass
-
-# TODO: Crear el esquema principal que combina queries y mutaciones
-schema = graphene.Schema(query=Query, mutation=Mutation)
+schema = graphene.Schema(query=Query, mutation=MutationRoot)
